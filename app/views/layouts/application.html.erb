@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "Shop Min" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+<head>
+  <title><%= content_for(:title) || "DDO" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="A store selling second hand items in no specific categories or order">
+  <meta name="keywords" content="Store Second hand second_hand disowned Disorderly objects">
+  <meta content="HalliS20" name="author"/>
 
-    <%= yield :head %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= yield :meta_tags %>
 
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application" %>
-  </head>
+  <%= yield :head %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <%= stylesheet_link_tag "application" %>
+</head>
+
+<body>
+<nav>
+  <div class="title-box">
+    <h1>DDO</h1>
+    <p>Disorderly Disowned Objects</p>
+  </div>
+  <ul>
+    <li><p>Store </p></li>
+    <li><p>About</p></li>
+  </ul>
+
+</nav>
+<%= yield %>
+</body>
 </html>

@@ -1,0 +1,12 @@
+
+<h1><%= @sale_item.title %></h1>
+
+<p>Price: <%= number_to_currency(@sale_item.price) %></p>
+
+<% if @sale_item.photo.attached? %>
+  <%= image_tag @sale_item.photo %>
+<% else %>
+  <p>No image available</p>
+<% end %>
+
+<%= link_to 'Back to all items', sale_items_path %>

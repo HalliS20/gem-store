@@ -1,0 +1,22 @@
+<div class="store-part">
+  <% @items.each do |item| %>
+    <%= link_to item_path(item), class: 'item-link' do %>
+      <div class="sale_item">
+        <div class="sale_img">
+          <%= image_tag item.photo if item.photo.attached? %>
+        </div>
+        <div class="item_details">
+          <div class="detail_text">
+            <h5><%= item.title %></h5>
+            <p><%= number_to_currency(item.price) %></p>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+
+  <%= link_to 'New Item', new_item_path, class: "new-item-link" %>
+
+</div>

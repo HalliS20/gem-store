@@ -1,0 +1,267 @@
+/* * This is a manifest file that'll be compiled into application.css, which will include all the files */
+/* * listed below. */
+/* * */
+/* * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's */
+/* * vendor/assets/stylesheets directory can be referenced here using a relative path. */
+/* * */
+/* * You're free to add application-wide styles to this file and they'll appear at the bottom of the */
+/* * compiled file so the styles you add here take precedence over styles defined in any other CSS */
+/* * files in this directory. Styles in this file should be added after the last require_* statement. */
+/* * It is generally better to create a new file per style scope. */
+/* * */
+/* *= require_tree . */
+/* *= require_self */
+
+/* Playfair Display */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+/* Crimson Text */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+$second-back: #edebe4;
+$hover-color: darken($second-back, 5%);
+$back3: lighten($second-back, 5%);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "playfair display", serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 120px);
+  margin-top: 120px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+
+
+  nav {
+    color: whitesmoke;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    background-color: seagreen;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    //background-color: #edebe4;
+    height: 80px;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //border-bottom: 1px solid black;
+    //border-left: 1px solid black;
+    //border-right: 1px solid black;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+
+
+    .title-box {
+      padding: 20px;
+      width: min-content;
+      transition: text-shadow 0.3s ease;
+      cursor: pointer;
+      text-wrap: nowrap;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      h1 {
+        width: min-content;
+        font-size: 2rem;
+        font-weight: 600;
+        transition: text-shadow 0.3s ease;
+      }
+
+      p {
+        font-size: 0.8rem;
+        width: min-content;
+      }
+    }
+
+    div {
+      height: 100%;
+      width: min-content;
+    }
+
+    ul {
+      width: min-content;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      align-content: center;
+      position: relative;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 20px;
+
+
+      li {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        min-width: 150px;
+        border-radius: 3px;
+        position: relative;
+        font-size: 1rem;
+
+
+        p {
+          display: flex;
+          border-radius: 5px;
+        }
+
+        &:hover {
+          background-color: whitesmoke;
+          color: #333;
+          box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+
+        }
+      }
+
+    }
+  }
+
+  .store-part {
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2); /* Increase shadow from the top */
+
+  }
+
+  .item-link {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    margin: 3px;
+    text-decoration: none;
+    font-family: "playfair display", serif;
+    //box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      width: 285px;
+
+      .sale_item {
+        .sale_img {
+
+          img {
+            opacity: 90%;
+            filter: blur(1px);
+          }
+        }
+
+
+        .item_details {
+          .line {
+            width: 100%;
+            border-bottom: 1px solid #333;
+
+          }
+        }
+      }
+    }
+
+    .sale_item {
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      margin: 10px;
+
+      .item_details {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        height: 100%;
+        position: relative;
+        padding: 4px;
+        transition: border 0.2s ease;
+        border-bottom: 1px solid transparent;
+
+        .detail_text {
+          display: flex;
+          width: 98%;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 0 5px;
+
+          h5 {
+            font-size: 0.9rem;
+
+          }
+        }
+
+        .line {
+          width: 0;
+          border-bottom: 1px solid transparent;
+          transition: width 0.3s ease, border 0.3s ease;
+        }
+
+      }
+
+      .sale_img {
+        border: 1px solid transparent;
+        border-bottom: 0;
+        transition: border 0.3s ease;
+        width: 100%;
+
+        img {
+          transition: all 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow only at the bottom */
+          //border-top-left-radius: 5px;
+          //border-top-right-radius: 5px;
+        }
+      }
+    }
+  }
+
+
+  .new-item-link {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    color: #333;
+  }
+
+}
