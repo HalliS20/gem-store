@@ -7,7 +7,7 @@ gem "sqlite3", ">= 1.4" # Use sqlite3 as the database for Active Record
 gem "puma", ">= 5.0" # Use the Puma web server [https://github.com/puma/puma]
 gem "sass-rails", ">= 6"
 gem "sassc-rails"
-gem "activestorage", "~> 7.2.0"
+gem "activestorage", "~> 7.2.1"
 gem "mini_magick"
 gem "image_processing", "~> 1.2"
 gem "active_storage_validations"
